@@ -30,6 +30,7 @@ func init() {
 	licenseTemplate["mit"] = template.Must(template.New("").Parse(tmplMIT))
 	licenseTemplate["bsd"] = template.Must(template.New("").Parse(tmplBSD))
 	licenseTemplate["mpl"] = template.Must(template.New("").Parse(tmplMPL))
+	licenseTemplate["closed"] = template.Must(template.New("").Parse(tmplClosed))
 }
 
 type copyrightData struct {
@@ -99,3 +100,5 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
 const tmplMPL = `This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this
 file, You can obtain one at https://mozilla.org/MPL/2.0/.`
+
+const tmplClosed = `Copyright (c) {{.Year}} {{.Holder}} All rights reserved.`
